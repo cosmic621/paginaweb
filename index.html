@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accidentes de Tránsito en Bogotá</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        
+        function mostrarSeccion(seccion, event) {
+            event.preventDefault();  
+
+            
+            var secciones = document.getElementsByClassName('seccion');
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].style.display = 'none';
+            }
+
+            
+            document.getElementById(seccion).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Accidentes de Tránsito en Bogotá</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSeccion('introduccion', event)">Introducción</a></li>
+                <li><a href="#" onclick="mostrarSeccion('causas', event)">Causas</a></li>
+                <li><a href="#" onclick="mostrarSeccion('efectos', event)">Efectos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('soluciones', event)">Soluciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduccion" class="seccion">
+         
+            <h2>¿Qué son los accidentes de tránsito en Bogotá?</h2>
+            <img src="imagenes/accidente.jfif" alt="">
+            <p>Los accidentes de tránsito en Bogotá son incidentes que ocurren en las vías de la capital de Colombia, involucrando vehículos, peatones, ciclistas y motociclistas. La alta densidad de población, la congestión vehicular y el comportamiento de los actores viales contribuyen a que los accidentes de tránsito sean una problemática constante en la ciudad.</p>
+            <p>Estos accidentes no solo generan pérdidas materiales, sino que también tienen un impacto significativo en la vida y la salud de los ciudadanos, causando lesiones graves y, en algunos casos, la muerte.</p>
+        </section>
+
+        <section id="causas" class="seccion" style="display: none;">
+            <h2>Causas de los accidentes de tránsito en Bogotá</h2>
+            <ul>
+                <li><strong>Exceso de velocidad:</strong>  Muchos conductores no respetan los límites de velocidad, lo que incrementa el riesgo de colisiones graves.</li>
+                <li><strong>Conducción bajo efectos del alcohol:</strong> El consumo de alcohol al volante sigue siendo una de las principales causas de accidentes fatales en la ciudad.</li>
+                <li><strong>Infraestructura vial deficiente:</strong> Algunas zonas de la ciudad tienen vías mal señalizadas o en mal estado, lo que contribuye a la ocurrencia de accidentes.</li>
+                <li><strong>Imprudencia de los peatones:</strong> El cruce en lugares no permitidos y la falta de atención al tráfico por parte de peatones también son causas comunes.</li>
+            </ul>
+        </section>
+
+        <section id="efectos" class="seccion" style="display: none;">
+            <h2>Efectos de los accidentes de tránsito en Bogotá</h2>
+            <ul>
+                <li><strong>Pérdida de vidas humanas:</strong> Los accidentes de tránsito son una de las principales causas de muerte en la ciudad, afectando tanto a conductores como a peatones.</li>
+                <li><strong>Lesiones graves:</strong> Muchas personas quedan con discapacidades permanentes o sufren heridas de gravedad como resultado de los accidentes.</li>
+                <li><strong>Congestión vehicular:</strong> Los accidentes provocan grandes embotellamientos en las principales vías de la ciudad, aumentando la ya complicada movilidad.</li>
+                <li><strong>Costos económicos:</strong> Las familias y el sistema de salud pública enfrentan altos costos debido a tratamientos médicos, reparaciones de vehículos y pérdidas laborales.</li>
+            </ul>
+        </section>
+
+        <section id="soluciones" class="seccion" style="display: none;">
+            <h2>Soluciones para reducir los accidentes de tránsito en Bogotá</h2>
+            <ul>
+                <li><strong>Mejorar la infraestructura vial:</strong> La creación de vías seguras, la reparación de carreteras y la mejora en la señalización vial ayudarían a reducir los accidentes.</li>
+                <li><strong>Campañas de concientización:</strong> Fomentar la educación vial y la responsabilidad entre los conductores, peatones y ciclistas es clave para mejorar la seguridad.</li>
+                <li><strong>Fortalecer las leyes de tránsito:</strong> El aumento de las sanciones por conducir bajo los efectos del alcohol o por exceso de velocidad podría disuadir las conductas irresponsables.</li>
+                <li><strong>Promoción del transporte público:</strong> Incentivar el uso del transporte público y otros medios sostenibles puede reducir la cantidad de vehículos particulares en las vías y, por ende, los accidentes.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seguridad Vial Bogotá - Todos los derechos reservados (KestWard).</p>
+    </footer>
+</body>
+</html>
